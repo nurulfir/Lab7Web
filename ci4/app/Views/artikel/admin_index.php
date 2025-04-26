@@ -1,8 +1,5 @@
 <?= $this->include('template/admin_header'); ?>
-<form method="get" class="form-search">
-    <input type="text" name="q" value="<?= $q; ?>" placeholder="Cari data">
-    <input type="submit" value="Cari" class="btn btn-primary">
-</form>
+
 <table class="table">
     <thead>
         <tr>
@@ -42,57 +39,5 @@
         </tr>
     </tfoot>
 </table>
-<style>
-    ul.pagination {
-        width: auto;
-        max-width: max-content;
-        margin: 0 auto;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        list-style: none;
-    }
 
-    .pagination {
-        display: flex;
-        list-style: none;
-        justify-content: center;
-        padding: 0;
-        margin: 30px 0;
-    }
-
-    .pagination li {
-        margin: 0;
-    }
-
-    .pagination li a,
-    .pagination li span {
-        display: inline-block;
-        padding: 8px 12px;
-        text-decoration: none;
-        color: #ffffff;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        transition: background-color 0.3s, color 0.3s;
-        background: none;
-    }
-
-    .pagination li a:hover {
-        color: white;
-        background-color: #007bff;
-    }
-
-    .pagination li.active span {
-        color: white;
-        background-color: #007bff;
-    }
-
-    .pagination li.disabled span {
-        color: #ccc;
-        pointer-events: none;
-    }
-</style>
-<div class="pagination">
-    <?= $pager->only(['q'])->links(); ?>
-</div>
 <?= $this->include('template/admin_footer'); ?>
